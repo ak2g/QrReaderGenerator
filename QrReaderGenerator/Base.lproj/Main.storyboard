@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QrReaderGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t2d-yI-cOy">
+                                <rect key="frame" x="225" y="20" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="HNk-nY-1br"/>
+                                    <constraint firstAttribute="height" constant="150" id="ibP-qM-Bc8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny4-bk-YCh">
+                                <rect key="frame" x="281" y="373" width="39" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DdT-M4-LzN"/>
+                                </constraints>
+                                <state key="normal" title="Scan "/>
+                                <connections>
+                                    <action selector="ScanMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yVs-vl-hK1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYZ-x2-kr7">
+                                <rect key="frame" x="269" y="411" width="64" height="30"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="generate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLY-b7-5pl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChE-1B-cWl">
+                                <rect key="frame" x="277" y="449" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="Cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y64-K6-fIK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kti-X8-bpa">
+                                <rect key="frame" x="133" y="178" width="312" height="158"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="Lh9-mQ-Vxn"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tYZ-x2-kr7" firstAttribute="top" secondItem="ny4-bk-YCh" secondAttribute="bottom" constant="8" symbolic="YES" id="1WL-mC-2nz"/>
+                            <constraint firstItem="ny4-bk-YCh" firstAttribute="centerX" secondItem="tYZ-x2-kr7" secondAttribute="centerX" id="2PJ-vU-2s6"/>
+                            <constraint firstAttribute="bottom" secondItem="ny4-bk-YCh" secondAttribute="bottom" constant="197" id="3YX-dN-QGq"/>
+                            <constraint firstItem="ny4-bk-YCh" firstAttribute="centerX" secondItem="ChE-1B-cWl" secondAttribute="centerX" id="EqT-v2-pzR"/>
+                            <constraint firstItem="ny4-bk-YCh" firstAttribute="top" secondItem="kti-X8-bpa" secondAttribute="bottom" constant="37" id="ICT-gf-oe1"/>
+                            <constraint firstItem="ChE-1B-cWl" firstAttribute="top" secondItem="tYZ-x2-kr7" secondAttribute="bottom" constant="8" symbolic="YES" id="Olz-Pu-JhM"/>
+                            <constraint firstItem="t2d-yI-cOy" firstAttribute="centerX" secondItem="kti-X8-bpa" secondAttribute="centerX" constant="11" id="aF5-Sn-8dX"/>
+                            <constraint firstItem="t2d-yI-cOy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHu-Lg-5qg"/>
+                            <constraint firstItem="t2d-yI-cOy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cEq-4E-NHi"/>
+                            <constraint firstItem="t2d-yI-cOy" firstAttribute="centerX" secondItem="ny4-bk-YCh" secondAttribute="centerX" id="hDo-3W-gmX"/>
+                            <constraint firstItem="kti-X8-bpa" firstAttribute="top" secondItem="t2d-yI-cOy" secondAttribute="bottom" constant="8" symbolic="YES" id="yOW-Be-aUb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CancelButton" destination="ChE-1B-cWl" id="2lv-yM-7Jb"/>
+                        <outlet property="imgView" destination="t2d-yI-cOy" id="O5z-73-T9f"/>
+                        <outlet property="textField" destination="kti-X8-bpa" id="ToL-3m-fsw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="309"/>
+        </scene>
+    </scenes>
+</document>
